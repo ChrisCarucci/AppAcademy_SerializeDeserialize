@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
 
       if(req.header["Content-Type"] === "application/json") {
         req.body = JSON.parse(reqBody)
-      } else if (req.header["Content-Type"] === "x-www-url-encoded") {
+      } else if (req.header["Content-Type"] === "application/x-www-form-urlencoded") {
 
       req.body = reqBody
         .split("&")
